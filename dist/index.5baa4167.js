@@ -2956,7 +2956,7 @@ const parent = /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
 }, /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
     id: "child"
 }, [
-    /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {}, "Namaste React"),
+    /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {}, "Namaste React ji"),
     /*#__PURE__*/ (0, _reactDefault.default).createElement("h2", {}, "Nested html structure using react")
 ]));
 const root = (0, _reactDomDefault.default).createRoot(document.getElementById("root"));
