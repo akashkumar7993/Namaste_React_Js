@@ -1,4 +1,48 @@
-#parent{
-    color: orangered;
-    font-size: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo{
+    margin-left: 10px;
+    height: 70px;
+}
+.nav-items > ul{
+    display: flex;
+    margin-right: 20px;
+    list-style-type: none;
+}
+.nav-items > ul > li{
+    font-size: 20px;
+    padding: 10px;
+    color: rgb(229, 28, 85);
+}
+.body{
+    margin: 0 30px;
+}
+.search{
+    padding: 5px;
+}
+.res-container{    
+    font-size: 14px;
+}
+.res-card{
+    padding: 5px;
+    width: 200px;  
+}
+.res-card:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+.res-logo{
+    width: 100%;
+}
+.res-card > h3 {
+    margin: 0;
 }
