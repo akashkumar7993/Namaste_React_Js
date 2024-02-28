@@ -5,7 +5,10 @@ import Shimmer from "./Shimmer";
 const Body = () => {
     
     const [restaurants, setRestaurants] = useState([]);
+    const [searchText, setsearchText] = useState("");
+    const [filteredRestaurant, setfilteredRestaurant] = useState([]);
 
+    // WhenEver state variable update, react triggers a reconcilation cycle(re-renders the component)
     useEffect(() => {
         fetchData();
     }, []);
@@ -18,7 +21,8 @@ const Body = () => {
             const json = await data.json();
 
             console.log(json);
-            setRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)    
+            setRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+            setfilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);  
     };
 
     if (restaurants.length === 0){
@@ -28,6 +32,19 @@ const Body = () => {
     return (
         <div className="body">
         <div className="filter">
+            <div className="search"> 
+                <input type="text" className="search-box" value={searchText}
+                onChange={(e) => {
+                    setsearchText(e.target.value);
+                }}
+                />
+                <button onClick={() => {
+                    const filteredRestaurant = restaurants.filter((res) =>
+                    res.info.name.toLowerCase().includes(searchText.toLowerCase())
+                    );
+                    setfilteredRestaurant(filteredRestaurant);
+                }}>Search</button>
+            </div>
             <button className="filter-btn" onClick={() => {
                 const filteredList = restaurants.filter(
                     (res) => res.info.avgRating > 4
@@ -40,7 +57,7 @@ const Body = () => {
 
 
         <div className="res-container">
-            {restaurants.map((restaurant)=>(
+            {filteredRestaurant.map((restaurant)=>(
                 <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
             ))}
         </div>
