@@ -1,2 +1,2 @@
 # Namaste_React_Js
- Learning React js from Beginner to Advance 
+❤ Namaste React Live Course from Zero to Hero 🚀
