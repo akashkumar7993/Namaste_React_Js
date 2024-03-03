@@ -7,9 +7,10 @@ const Header = ()=>{
     const [btnNameReact, setbtnNameReact] = useState("Login");
     return (
         <div className="header">
-            <div className="logo-contyainer">
-                <img className="logo"
-                src = {LOGO_URL}/>
+            
+            <div className="logo-contyainer"><Link to="/">
+                <img className="logo" 
+                src = {LOGO_URL}  /></Link>
             </div>
             <div className="nav-items">
                 <ul>
