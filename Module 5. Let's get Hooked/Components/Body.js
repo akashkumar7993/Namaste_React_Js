@@ -35,39 +35,37 @@ const Body = () => {
     }
 
     return (
-        <div className="body">
+        <div className="body-container">
         <div className="filter">
-            <div className="search"> 
-                <input type="text" className="search-box" value={searchText}
+            <div className="search-container"> 
+                <input type="text" className="search-input" placeholder="Search a restuarant you want..." value={searchText}
                 onChange={(e) => {
                     setsearchText(e.target.value);
                 }}
                 />
-                <button onClick={() => {
+                <button className="search-btn" onClick={() => {
                     const filteredRestaurant = restaurants.filter((res) =>
                     res.info.name.toLowerCase().includes(searchText.toLowerCase())
                     );
                     setfilteredRestaurant(filteredRestaurant);
                 }}>Search</button>
             </div>
-            <button className="filter-btn" onClick={() => {
+            {/* <button className="filter-btn" onClick={() => {
                 const filteredList = restaurants.filter(
                     (res) => res.info.avgRating > 4
                 );
                 setRestaurants(filteredList);
             }}>
                 Top Rated Restaurant
-            </button>
+            </button> */}
         </div>
-
-
-        <div className="res-container">
+        <div className="restaurant-list">
             {filteredRestaurant.map((restaurant)=>(
                 <Link key={restaurant.info.id} 
                 to={"/restaurants/" + restaurant.info.id}>
                 <RestaurantCard  resData={restaurant}/>
                 </Link>
-            ))};
+            ))}
         </div>
         </div>
     );
