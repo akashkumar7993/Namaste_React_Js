@@ -79,6 +79,9 @@ a {
 .body-container{
     min-height: 87vh;
 }
+.about-container{
+  min-height: 87vh;
+}
 .search-container {
   margin: 100px auto 20px;
   display: flex;
