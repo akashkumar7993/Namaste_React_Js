@@ -27,8 +27,8 @@ const RestaurantMenu = () => {
         <div className="res-menu">
             <h1>{name}</h1>
             <p>{cuisines.join(", ")} - {costForTwoMessage}</p> 
-            {categories.map((rescat) => 
-            (<RestaurantCateogory datamenu={rescat?.card?.card}/>)
+            {categories.map((rescat) => (
+            <RestaurantCateogory datamenu={rescat?.card?.card}/>)
             )}        
         </div>
     );
