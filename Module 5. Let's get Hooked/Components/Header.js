@@ -1,9 +1,12 @@
 import { LOGO_URL } from "../utils/contants";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = ()=>{
 
+    const cartItems = useSelector((store) => store.cart.items); 
+    
     const [btnNameReact, setbtnNameReact] = useState("Login");
     return (
         <div className="header">
@@ -17,7 +20,7 @@ const Header = ()=>{
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/contact">Contact Us</Link></li>
-                    <li><Link to="/cart">Cart</Link></li>
+                    <li><Link to="/cart">Cart{cartItems.length}</Link></li>
                     <button className="login-btn"
                     onClick={() => {
                         btnNameReact === "Login" ? setbtnNameReact("Logout") : setbtnNameReact("Login");
