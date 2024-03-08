@@ -1,7 +1,6 @@
 import { CDN_URL } from "../utils/contants";
 
 const ItemList = ({items}) => {
-    console.log(items);
     return (
         <div>
             {items.map((itemlist) => (

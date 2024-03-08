@@ -1,20 +1,25 @@
 import ItemList from "./itemList";
+import { useState } from "react";
 
-const RestaurantCateogory = ({datamenu}) => {
+const RestaurantCateogory = ({datamenu, showItems, setShowIndex}) => {
+ 
+        const handleClick = () => {
+            setShowIndex();
+        }
     return (
         <div className="res-menu-content">
         <div className="res-category">
             {/* header*/}
-            <div className="res-category-head">
+            <div className="res-category-head" onClick={handleClick}>
                 <span>{datamenu?.title} ({datamenu.itemCards.length})</span>
                 <span>˅</span>
             
             </div>
 
             {/*body*/}
-            <div className="items-add">
-            <ItemList items={datamenu.itemCards} />
-            </div>
+             
+            {showItems && <ItemList items={datamenu.itemCards} />}
+           
             </div>
         </div>
     );
