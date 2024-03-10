@@ -17,6 +17,7 @@ test("Should load contact us component", () => {
 
     expect(button).toBeInTheDocument();
 });
+
 test("Should load input name inside contact component", () => {
     render(<Contact />); 
 
