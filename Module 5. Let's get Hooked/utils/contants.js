@@ -6,3 +6,10 @@ export const LOGO_URL =
 
 export const MENU_API = 
 "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.65420&lng=77.23730&restaurantId=";
+
+
+// shimmer card unit
+export const shimmer_card_unit = 20;
+
+// shimmer Menu card unit
+export const shimmer_menu_card_unit = 6;
