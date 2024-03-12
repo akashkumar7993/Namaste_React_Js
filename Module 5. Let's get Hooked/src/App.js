@@ -11,6 +11,7 @@ import RestaurantCard from "../Components/RestaurantCard";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { Provider } from "react-redux";
 import appStore from "../utils/appStore";
+import Footer from "../Components/Footer";
 
 const Cart = lazy(() => import("../Components/Cart"));
 const AppLayout = () => {
@@ -19,6 +20,7 @@ const AppLayout = () => {
         <div className="app">
             <Header/>
             <Outlet/>
+            <Footer/>
         </div>
         </Provider>
     );

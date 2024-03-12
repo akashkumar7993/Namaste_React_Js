@@ -1,4 +1,5 @@
 import { LOGO_URL } from "../utils/contants";
+import logo from "../images/logo.png";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -13,7 +14,7 @@ const Header = ()=>{
             
             <div className="logo-contyainer"><Link to="/">
                 <img className="logo" 
-                src = {LOGO_URL}  /></Link>
+                src = {logo}  /></Link>
             </div>
             <div className="nav-items">
                 <ul>

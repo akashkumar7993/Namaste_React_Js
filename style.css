@@ -18,11 +18,11 @@ a {
     --light-text-title: #000000;
     --light-descri-color: rgb(155, 154, 154);
     --text-color: #000;
-    --blue: #3e66de;
+    --blue: #0CAFFF;
     --light-green: #00ad1d;
-    --dark-green: #016034;
+    --dark-green: #000000;
     --light-orange: #ffaf60;
-    --dark-orange: #c26100;
+    --dark-orange: #0CAFFF;
     --x-dark-orange: rgb(157, 42, 1);
     --white: #fff;
   }
@@ -34,7 +34,7 @@ a {
     height: 80px;
     background-color: var(--header-bg-color);
     border-radius: 5px;
-    box-shadow: -2px 7px 5px -6px rgba(0, 0, 0, 0.61);
+    box-shadow: -2px 7px 5px -6px rgba(50, 122, 231, 0.337);
     color: var(--light-text-color);
     font-weight: bold;
     position: fixed;
@@ -45,12 +45,12 @@ a {
   }
 .logo{
     padding: 10px 0 10px 15px;
-    width: 90px;
+    width: 190px;
 }
 .nav-items > ul{
   list-style-type: none;
   display: flex;
-  margin-right: 30px;
+  margin-right: 40px;
   align-items: center;
   justify-content: space-between;
 }
@@ -66,8 +66,8 @@ a {
     font-size: 16px;
 }
 .nav-items > ul > li:hover,
-.nav-items > ul > li:hover .logout-btn,
-.nav-items > ul > li:hover .login-btn {
+.nav-items > ul > li:hover .login-btn,
+.nav-items > ul > li:hover .logout-btn {
   background-color: var(--blue);
   border-radius: 5px;
   cursor: pointer;
@@ -95,7 +95,7 @@ a {
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
     background-color: #ffffff;
-    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: -2px 7px 5px -6px rgba(50, 122, 231, 0.337);
     padding: 8px 15px 8px 12px;
     border: 1px solid #aabcca;
     border-right: 0;
@@ -114,13 +114,15 @@ a {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     background-color: var(--dark-orange);
-    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: -2px 7px 5px -6px rgba(50, 122, 231, 0.337);
     color: #ffffff;
     padding: 12px 22px;
     margin-left: -4px;
     cursor: pointer;
     border: none;
     outline: none;
+    font-weight: 700;
+    font-size: medium;
   }
   
   .search-container .search-btn:hover {
@@ -552,5 +554,48 @@ text-align: center;
   }
 }
 /*Animation to Shimmer Component Card and Menu card End*/
+
+/* footer CSS Start*/
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: auto;
+  text-align: center;
+  background-color: var(--footer-bg-color);
+  padding: 20px 10px 20px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.71);
+}
+
+.footer > i {
+  padding: 0 5px 0;
+  font-size: smaller;
+}
+
+.footer > a {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.footer > a:hover {
+  color: var(--x-dark-orange);
+}
+
+.fa-heart {
+  color: darkred;
+}
+
+.footer > strong {
+  padding-left: 5px;
+}
+
+.footer > strong > span {
+  color: var(--x-dark-orange);
+}
+
+/* footer CSS End*/
 
 
