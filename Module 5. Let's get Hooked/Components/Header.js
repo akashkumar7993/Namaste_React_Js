@@ -1,5 +1,6 @@
 import { LOGO_URL } from "../utils/contants";
 import logo from "../images/logo.png";
+import cart from "../images/cart.png";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -21,7 +22,8 @@ const Header = ()=>{
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/contact">Contact Us</Link></li>
-                    <li><Link to="/cart">Cart{cartItems.length}</Link></li>
+                    <li><Link to="/cart"><img src={cart} className="cart-logo"/></Link></li>
+                    {/* <li><Link to="/cart"><img src={cart} className="cart-logo"/>{cartItems.length}</Link></li> */}
                     <button className="login-btn"
                     onClick={() => {
                         btnNameReact === "Login" ? setbtnNameReact("Logout") : setbtnNameReact("Login");

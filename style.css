@@ -20,9 +20,8 @@ a {
     --text-color: #000;
     --blue: #0CAFFF;
     --light-green: #00ad1d;
-    --dark-green: #000000;
+    --dark-black: #000000;
     --light-orange: #ffaf60;
-    --dark-orange: #0CAFFF;
     --x-dark-orange: rgb(157, 42, 1);
     --white: #fff;
   }
@@ -60,18 +59,27 @@ a {
 .nav-items > ul > li .fa-solid {
     padding-top: 15%;
 }
-.login{
-    padding: 0 30px;
-    cursor: pointer;
-    font-size: 16px;
-}
-.nav-items > ul > li:hover,
-.nav-items > ul > li:hover .login-btn,
-.nav-items > ul > li:hover .logout-btn {
-  background-color: var(--blue);
+.login-btn{
   border-radius: 5px;
+  background-color: var(--blue);
+  box-shadow: -2px 7px 5px -6px rgba(50, 122, 231, 0.337);
+  color: #ffffff;
+  padding: 3px 10px;
   cursor: pointer;
-  color: var(--white);
+  border: none;
+  font-weight: 700;
+  font-size: medium;
+}
+.login-btn:hover{
+  background-color: #000;
+}
+.nav-items > ul > li:hover {
+  cursor: pointer;
+  color: var(--blue);
+}
+.nav-items > ul > li .cart-logo{
+ width: 50%;
+ /* border: 1px solid black; */
 }
 .filter{
     display: flex;
@@ -105,7 +113,7 @@ a {
     font-weight: 500;
   }
   .search-container .search-input:focus {
-    border-color: var(--dark-orange);
+    border-color: var(--blue);
   }
   .search-container .search-input:placeholder-shown {
     text-overflow: ellipsis;
@@ -113,7 +121,7 @@ a {
   .search-container .search-btn {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: var(--dark-orange);
+    background-color: var(--blue);
     box-shadow: -2px 7px 5px -6px rgba(50, 122, 231, 0.337);
     color: #ffffff;
     padding: 12px 22px;
@@ -126,7 +134,7 @@ a {
   }
   
   .search-container .search-btn:hover {
-    background-color: var(--dark-green);
+    background-color: var(--dark-black);
   }
   .restaurant-list {
     width: auto;
@@ -377,7 +385,7 @@ text-align: center;
   border-radius: 5px;
   box-sizing: border-box;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
-  border: 1px solid var(--dark-orange);
+  border: 1px solid var(--dark-black);
   min-width: 40vw;
 }
 
@@ -387,7 +395,7 @@ text-align: center;
   border-radius: 5px;
   box-sizing: border-box;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
-  border: 1px solid var(--dark-orange);
+  border: 1px solid var(--dark-black);
   min-width: 40vw;
 }
 
@@ -399,7 +407,7 @@ text-align: center;
 .contact-container .contact-right form button {
   padding: 10px 20px;
   margin: 10px;
-  background-color: var(--dark-orange);
+  background-color: var(--blue);
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
   color: #ffffff;
   font-size: large;
@@ -409,7 +417,7 @@ text-align: center;
 }
 
 .contact-container .contact-right form button:hover {
-  background-color: green;
+  background-color: var(--dark-black);
 }
 
 /* Contact us page CSS End */
@@ -577,11 +585,11 @@ text-align: center;
 
 .footer > a {
   font-weight: 700;
-  color: var(--dark-blue);
+  color: var(--blue);
 }
 
 .footer > a:hover {
-  color: var(--x-dark-orange);
+  color: var(--dark-black);
 }
 
 .fa-heart {
@@ -593,7 +601,7 @@ text-align: center;
 }
 
 .footer > strong > span {
-  color: var(--x-dark-orange);
+  color: var(--blue);
 }
 
 /* footer CSS End*/
