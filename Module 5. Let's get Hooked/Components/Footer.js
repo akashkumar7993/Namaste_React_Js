@@ -15,7 +15,7 @@ const Footer = () => {
         <i className="fa-solid fa-copyright"></i>
           {year}
           <strong>
-            Only<span>Food</span>
+            Only<span>alakash</span>
           </strong>
       </div>
     );
