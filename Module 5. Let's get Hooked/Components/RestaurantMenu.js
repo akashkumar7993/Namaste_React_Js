@@ -4,40 +4,41 @@ import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCateogory from "./RestaurantCategory";
 import { CDN_URL } from "../utils/contants";
 import { useState } from "react";
-import { useState } from "react";
 
 const RestaurantMenu = () => {
 
     const {resId} = useParams();
 
-    const resinfo = useRestaurantMenu(resId);
-    const[showIndex, setShowIndex] =useState(null);
+    const resInfo = useRestaurantMenu(resId);
+    const[showIndex, setShowIndex] = useState(null);
 
-    if (resinfo === null) return <MenuShimmer/>;
+    if (resInfo === null) return <MenuShimmer/>;
 
-    const {name, cuisines, costForTwoMessage,areaName,avgRating}= 
-    resinfo?.cards[0]?.card?.card?.info;
+    // const {name, cuisines, costForTwoMessage,areaName,avgRating}= 
+    // resInfo?.cards[0]?.card?.card?.info;
 
-    const { itemCards } = resinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-    
-    const categories = resinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    const { itemCards } =
+    resInfo.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+
+    const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
         (c) => 
-        c.card?.card?.["@type"] === 
+            c.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
     return(
         <div className="res-menu">
             <div className="res-menu-list">
-            <img className="restro-logo" alt="restro-logo" src={CDN_URL+ resinfo?.cards[0]?.card?.card?.info.cloudinaryImageId }/>
+            <img className="restro-logo" alt="restro-logo" src={CDN_URL+ resInfo?.cards[0]?.card?.card?.info?.cloudinaryImageId }/>
                 <span>
-                <h3>{name}</h3>
-                <h4>{cuisines?.join(", ")}</h4>
-                <h5>{areaName} | {avgRating} stars |  - {costForTwoMessage}</h5> 
+                <h3>{resInfo?.cards[0]?.card?.card?.info?.name}</h3>
+                <h4>{resInfo?.cards[0]?.card?.card?.info?.cuisines?.join(", ")}</h4>
+                <h5>{resInfo?.cards[0]?.card?.card?.info?.areaName} | {resInfo?.cards[0]?.card?.card?.info?.avgRating} stars |  - {resInfo?.cards[0]?.card?.card?.info?.costForTwoMessage}</h5> 
                 </span>
                 </div>
-                {categories.map((rescat, index) => (
+                
+                {categories?.map((rescat, index) => (
                 <RestaurantCateogory key={rescat?.card?.card?.title} 
-                datamenu={rescat?.card?.card} 
+                data={rescat?.card?.card} 
                 showItems={index === showIndex ? true : false}
                 setShowIndex={() => setShowIndex(index)}/>)
                 )}                                

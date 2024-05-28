@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import {MENU_API} from "../utils/contants";
 
 const useRestaurantMenu = (resId) => {
- const [resinfo, setresinfo] = useState(null);
+ const [resInfo, setresInfo] = useState(null);
 
  useEffect(() => {
     fetchMenu();
@@ -12,9 +12,9 @@ const fetchMenu = async () => {
     const data = await fetch(MENU_API + resId);
     const json = await data.json();
 
-    setresinfo(json.data);
+    setresInfo(json.data);
 };
-return resinfo;
+return resInfo;
 };
 
 export default useRestaurantMenu;
