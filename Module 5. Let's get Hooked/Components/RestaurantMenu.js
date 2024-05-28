@@ -28,11 +28,13 @@ const RestaurantMenu = () => {
     return(
         <div className="res-menu">
             <div className="res-menu-list">
-            <img className="restro-logo" alt="restro-logo" src={CDN_URL+ resInfo?.cards[0]?.card?.card?.info?.cloudinaryImageId }/>
+            <img className="restro-logo" alt="restro-logo" src={CDN_URL+ resInfo?.cards[2]?.card?.card?.info?.cloudinaryImageId }/>
                 <span>
-                <h3>{resInfo?.cards[0]?.card?.card?.info?.name}</h3>
-                <h4>{resInfo?.cards[0]?.card?.card?.info?.cuisines?.join(", ")}</h4>
-                <h5>{resInfo?.cards[0]?.card?.card?.info?.areaName} | {resInfo?.cards[0]?.card?.card?.info?.avgRating} stars |  - {resInfo?.cards[0]?.card?.card?.info?.costForTwoMessage}</h5> 
+                <h3>{resInfo?.cards[2]?.card?.card?.info?.name}</h3>
+                <h4>{resInfo?.cards[2]?.card?.card?.info?.cuisines?.join(", ")}</h4>
+                <h5>{resInfo?.cards[2]?.card?.card?.info?.areaName} | 
+                {resInfo?.cards[2]?.card?.card?.info?.avgRating} stars |  
+                - {resInfo?.cards[2]?.card?.card?.info?.costForTwoMessage}</h5> 
                 </span>
                 </div>
                 
