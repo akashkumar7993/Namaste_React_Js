@@ -9,10 +9,11 @@ const Contact = () => {
     return (
       <div className="contact-container">
         <div className="contact-left">
-        <img src="https://raw.githubusercontent.com/chetannada/Namaste-React/main/Chapter%2009%20-%20Optimizing%20our%20App/Coding/Images/Contact-Us.png" alt="Contact us" />
-        </div>
-        <div className="contact-right">
         <h1>Contact us</h1>
+        <p>Need to get in touch us? Either fill out the form with your inquiry or</p> 
+        <p>find the department email you'd like to contact below.</p>
+        </div>
+        <div className="contact-right">        
                   <form onSubmit={handleSubmit}>
                   <input type="text" placeholder="Name" required/>
                       <input type="email" placeholder="Email" required/>
